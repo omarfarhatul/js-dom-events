@@ -3,6 +3,7 @@ console.log('This is separte js file.');
 // <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
 
 // option-2: add onclick function on the HTML element
+// IMPORTANT: We will use this many times
 function makeRed(){
     document.body.style.backgroundColor='red';
 }
@@ -15,7 +16,7 @@ function makeBlue(){
     document.body.style.backgroundColor='blue';
 }
 
-// option-3: another 
+// option-3: another [we will use this sometime]
 const PurpleButton=document.getElementById('make-purple');
 PurpleButton.onclick=function makePurple(){
     document.body.style.backgroundColor='purple';
@@ -33,4 +34,9 @@ function makepink(){
 const greenButton=document.getElementById('make-green');
 greenButton.addEventListener('click', function makeGreen(){
     document.body.style.backgroundColor='green';
+});
+// option-4: final
+// IMPORTANT: We will use this some times
+document.getElementById('make-goldenrod').addEventListener('click', function(){
+    document.body.style.backgroundColor='goldenrod';
 });
