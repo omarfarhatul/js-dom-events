@@ -17,12 +17,12 @@
                 deleteButton.removeAttribute('disabled');
             }
             else{
-                deleteButton.removeAttribute('disabled', true);
+                deleteButton.setAttribute('disabled', true);
             }
         });
 
         document.getElementById('btn-delete').addEventListener('click', function(){
-            const secret = document.getElementById('sectet-info');
+            const secret = document.getElementById('secret-info');
             secret.style.display='none';
         });
     </script>
