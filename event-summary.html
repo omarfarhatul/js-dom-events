@@ -8,8 +8,8 @@
 <body>
     <h1>Final DOM Event Handlers</h1>
     <h3 id="handler-status">Default Text</h3>
-    <p>Default Input Text</p>
-    <input type="text">
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-Field" type="text">
     <button id="btn-update">Update</button>
     <br>
     <br>
@@ -30,7 +30,13 @@
         });
 
         // option-2: recap
-        document
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField=document.getElementById('input-Field');
+            const inputText=inputField.value;
+
+            const p=document.getElementById('input-text-display');
+            p.innerText=inputText;
+        });
     </script>
 </body>
 </html>
