@@ -32,8 +32,16 @@
         </ul>
     </section>
     <script>
-        document.getElementById('item-2').addEventListener('click', function(){
-            console.log('Item-2 click');
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 first click');
+        });
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 second click');
+            event.stopPropagation();
+        });
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 third click');
+            event.stopImmediatePropagation();
         });
 
         document.getElementById('list-ul').addEventListener('click', function(){
